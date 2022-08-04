@@ -12,4 +12,5 @@ while str.isdigit(sides) == False:
         print
     sides = str(sides)
 sides = int(sides)
-print(random.randint(1,sides))
+num = random.randint(1,sides)
+print("You rolled a " + str(num))
