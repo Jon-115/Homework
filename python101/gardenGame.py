@@ -13,7 +13,7 @@ class Garden:
         self.waterlevel = 0
         self.waterloss = 10
 
-    def waterLoss(self):  # its shade decreases water loss by 2
+    def waterLoss(self):  # Determines how much water is lost and if it can't lose any it sets water level to 0
         self.waterloss = 10
 
         if self.waterlevel - (self.waterloss - (self.tree * 2)) <= 0:
@@ -24,10 +24,10 @@ class Garden:
                 self.waterlevel = self.waterlevel - self.waterloss
                 print("Water level has decreased by %s! " % self.waterloss)
 
-    def waterGain(self):
+    def waterGain(self): # Increases water level by 40
         self.waterlevel = self.waterlevel + 40
 
-    def rainChance(self): # each instance adds a 5% chance of rain
+    def rainChance(self): # Determines what the chances are of it Raining
         numGnome = self.gnome
         randomNum = random.random() * 100
         randomNum = int(randomNum)
@@ -38,7 +38,7 @@ class Garden:
         else:
             print("Guess there's no rain today.")
 
-    def treeLoss(self): # each woodchuck adds a 5% chance of lossing a tree
+    def treeLoss(self): # Determines what the chances are of lossing a tree
         numWoodchuck = self.woodchuck
         randomNum = random.random() * 100
         randomNum = int(randomNum)
@@ -47,20 +47,20 @@ class Garden:
             print('A woodchuck destroyed a tree!')
             self.tree = self.tree - 1
 
-    def treeGain(self):
+    def treeGain(self): # Increases trees by 1 if water level is at or more than 100
         if self.waterlevel >= 100:
             self.tree = self.tree + 1 # changed self.tree to numTree -Khanh
             print("A tree has risen from the ground. ")
             self.waterlevel = 0
 
-    def woodchuckGuest(self):
+    def woodchuckGuest(self): # Random chances of an increase in woodchucks by 1
         randomNum = random.random() * 100
         randomNum = int(randomNum)
         if 5 >= randomNum:
             self.woodchuck += 1 
             print('A woodchuck has moved into your neighborhood!')
             
-    def moreRain(self):
+    def moreRain(self): #Random chance of it raining
         randomNum = random.random() * 100
         randomNum = int(randomNum)
         if 5 >= randomNum:
@@ -75,7 +75,7 @@ class Garden:
 # woodchuckNum = useful.intput("Enter the amount of woodchucks.\n ")
 # DcGarden = Garden(treeNum,gnomeNum,woodchuckNum)
 
-DcGarden = Garden(4,3,1)
+DcGarden = Garden(9,10,1)
 
 turn = 1
 while DcGarden.tree < 11:
@@ -111,8 +111,6 @@ while DcGarden.tree < 11:
             DcGarden.gnome += 1
     print("")
     #input("")
-    
-    
     turn += 1
 
 
