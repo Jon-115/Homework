@@ -9,6 +9,22 @@ def chanceOf(numOf, chance):    # calculates chances of something happening and 
     else:
         return False
 
+def input123(Phrase):
+    i = 0
+    while i < 100:
+        x = input(Phrase)
+        if x == "1":
+            return "1"
+        elif x == "2":
+            return "2"   
+        elif x == "3":
+            return "3"  
+        elif x == "4":
+            return "4"  
+        else:
+            continue
+    i += 1
+
 #Create the environment
 #------------------------------------------------------------------------------------------------
 
@@ -56,9 +72,9 @@ class Garden:
             self.waterlevel = 0
 
     def woodchuckGuest(self):   # Random chances of an increase in woodchucks by 1
-        if chanceOf(1, 3) == True:
+        if chanceOf(1, 7) == True:
             self.woodchuck += 1 
-            print('A woodchuck has moved into your neighborhood! You have %s woodchunks'% self.woodchuck)
+            print('A woodchuck has moved into your neighborhood! You have %s woodchucks'% self.woodchuck)
             
     def moreRain(self):         # Random chance of it raining
         if chanceOf(1, 30) == True:
@@ -66,24 +82,41 @@ class Garden:
             self.waterGain()
             print('Its a miracle! It has started to rain!')
     
-#-----------------------------------------------------------------------------------
-def runGame(DcGarden):          # calls for the functions for every turn
-    DcGarden.isRaining = False
-    print('Turn: #%d ' % turn)
-    DcGarden.rainChance()
-    if DcGarden.isRaining == True:
-        DcGarden.waterGain()
-        print("The water level has risen. ")
-    else:
-        DcGarden.waterLoss()
-    DcGarden.treeGain()
-    DcGarden.treeLoss()
-    DcGarden.woodchuckGuest()
-    DcGarden.moreRain()
-    #print("")
-    print("Water level:",DcGarden.waterlevel)
-    print('We have ' + str(int(DcGarden.tree)) + ' trees.')
+    def endWeek(self,turn):                 # user can sacrifice a gnome or tree to reduces the number of woodchucks by 1
+        print("You have %s trees, %s gnomes, %s woodchucks. " %(self.tree, self.gnome, self.woodchuck))
+        if turn % 7 == 0:
+            answer = input123('''\nEnd of week %s. Would you like to sacrifice a tree or 2 gnomes to rid a woodchuck?
+                            \nPress 1 to sacrifice a tree. \nPress 2 to sacrifice 2 gnomes. \nPress 3 to continue.\n'''% int((turn/7)))
+            if answer == "1":
+                self.tree -= 1
+                self.woodchuck -= 1
+            elif answer == "2":
+                self.gnome -= 2
+                self.woodchuck -= 1
+            elif answer == "3":
+                print
 
+    def war(self):   
+        if self.gnome >= 2 and self.woodchuck >= 2:       # Chance for gnomes and woodchucks to fight each other. 
+            if chanceOf(1, 2) is True:                    # Could result in the loss of either 1 gnome or 1 woodchuck
+                print("The God of War, Ares, has incited violence in the gnomes and woodchucks! ")             
+                if chanceOf(1,49) == True:
+                    print("War broke out and woodchucks won.")
+                    self.gnome -= 1
+                else:
+                    print("War broke out and gnomes won.")
+                    self.woodchuck -= 1
+            else:
+                print('There is peace between gnomes and woodchucks.')
+
+
+    def underworld(self): # Chance to summon a hellhound to wipeout the woodchucks 
+        if self.woodchuck > 2:
+            if chanceOf(1, 2) == True:
+                print('The underworld god, Hades, summoned a hellhound, killing all of the woodchucks.')
+                self.woodchuck = 0
+            
+#-----------------------------------------------------------------------------------
 def treeorGnome(turn):          # Gives either gnome or tree every 10 turns
     if turn % 10 == 0:
         randNum = random.randint(0,9)
@@ -95,7 +128,27 @@ def treeorGnome(turn):          # Gives either gnome or tree every 10 turns
             DcGarden.gnome += 1
     
 
-
+def runGame(DcGarden,turn):          # calls for the functions for every turn
+    DcGarden.isRaining = False
+    print('''\n-----------------------------
+    Day: #%d
+    \b\b\b\b\b-----------------------------''' % turn)
+    DcGarden.rainChance()
+    if DcGarden.isRaining == True:
+        DcGarden.waterGain()
+        print("The water level has risen. ")
+    else:
+        DcGarden.waterLoss()
+    DcGarden.treeGain()
+    DcGarden.treeLoss()
+    DcGarden.woodchuckGuest()
+    DcGarden.moreRain()
+    DcGarden.endWeek(turn)
+    DcGarden.underworld()
+    DcGarden.war()
+    #print("")
+    print("Water level:",DcGarden.waterlevel)
+    print('We have ' + str(int(DcGarden.tree)) + ' trees.')
 
 # Run the game
 #-----------------------------------------------------------
@@ -104,11 +157,25 @@ def treeorGnome(turn):          # Gives either gnome or tree every 10 turns
 # woodchuckNum = useful.intput("Enter the amount of woodchucks.\n ")
 # DcGarden = Garden(treeNum,gnomeNum,woodchuckNum)
 
-DcGarden = Garden(4,3,0)
+easy = Garden(5,4,1)                            # Setting difficulties
+medium = Garden(4,4,1)
+hard = Garden(3,3,2)
+impossible = Garden(3,3,3)
+
+difficulty = input123('''Choose your difficulty. Press 1 for "Easy". Press 2 for "Medium". Press 3 for "Hard". Press 4 for "Impossible". ''')
+
+if difficulty == "1":
+    DcGarden = easy                             # Setting difficulties
+elif difficulty == "2":
+    DcGarden = medium
+elif difficulty == "3":
+    DcGarden = hard
+elif difficulty == "4":
+    DcGarden = impossible
 
 turn = 1
 while DcGarden.tree < 11:
-    runGame(DcGarden)
+    runGame(DcGarden, turn)
     treeorGnome(turn)
     if DcGarden.tree >= 10:
         print("The Gods rejoice your victory! ")
