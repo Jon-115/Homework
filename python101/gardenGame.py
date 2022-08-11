@@ -9,7 +9,7 @@ def chanceOf(numOf, chance):    # calculates chances of something happening and 
     else:
         return False
 
-def input123(Phrase):
+def input123(Phrase):           # Only accepts input 1,2,3,or 4
     i = 0
     while i < 100:
         x = input(Phrase)
@@ -86,7 +86,7 @@ class Garden:
         print("You have %s trees, %s gnomes, %s woodchucks. " %(self.tree, self.gnome, self.woodchuck))
         if turn % 7 == 0:
             answer = input123('''\nEnd of week %s. Would you like to sacrifice a tree or 2 gnomes to rid a woodchuck?
-                            \nPress 1 to sacrifice a tree. \nPress 2 to sacrifice 2 gnomes. \nPress 3 to continue.\n'''% int((turn/7)))
+                            \nPress 1 to sacrifice a tree. \nPress 2 to sacrifice 2 gnomes. \nPress 3 to sacrifice a tree and a  2 gnome. \nPress 4 to continue \n'''% int((turn/7)))
             if answer == "1":
                 self.tree -= 1
                 self.woodchuck -= 1
@@ -94,6 +94,10 @@ class Garden:
                 self.gnome -= 2
                 self.woodchuck -= 1
             elif answer == "3":
+                self.gnome -= 2
+                self.tree -= -1
+                self.woodchuck -= 1
+            elif answer == "4":
                 print
 
     def war(self):   
