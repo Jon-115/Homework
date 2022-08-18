@@ -1,0 +1,154 @@
+body {
+    background-color: rgba(255, 252, 252, 0.909);
+}
+
+.navbar {
+    background-color: white;
+    border-style: ridge;
+    padding:7px;
+    margin-bottom: 15px;
+    position:sticky;
+    display: flex;
+
+}
+
+#task {
+    position: relative; left: 300px;
+}
+
+#home,#myNet,#job,#msg,#notif,#me,#work {
+    margin-right:50px
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 800px;
+    height: 425px;
+    margin-bottom: 10px;
+    
+}
+
+#myPic {
+    border-radius: 50%;
+    border-color: black;
+}
+
+#unblu {
+    color: blue;
+}
+
+#openTo {
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    border-style: ridge;
+}
+
+#addPro {
+    background-color: white;
+    color: blue;
+    border-color: blue;
+    border-radius: 10px;
+    border-style: ridge;
+}
+
+#more {
+    background-color: white;
+    color: grey;
+    border-color: grey;
+    border-radius: 10px;
+    border-style: ridge;
+}
+
+#about {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 800px;
+    height: 125px;
+    margin-bottom: 10px;
+}
+
+
+.edu {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 800px;
+    height: 125px;
+    margin-bottom: 10px;
+}
+
+#eduLogo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logoWords {
+    position:relative;top: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around
+}
+
+#skills {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 800px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+
+.exp {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 800px;
+    height: 100px;
+    margin-bottom: 10px;
+    
+}
+
+#topside {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#botside {
+    background-color: white;
+    border-radius: 10px;
+    border-style: ridge;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#tags {
+
+    display: flex;
+    height: 225px;
+    width: 800px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#privacy {
+    width: 150px;
+    border-style: none;
+    background-color: rgba(255, 252, 252, 0.909);
+    opacity: .5;
+}
+
