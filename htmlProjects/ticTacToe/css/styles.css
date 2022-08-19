@@ -1,0 +1,48 @@
+body {
+    background-color: antiquewhite;
+    display: flex;
+    margin-top: 20px
+}
+
+
+
+.row {
+    display: flex;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border: 2px solid white;
+}
+
+
+.row:nth-child(odd) .square:nth-child(odd) {
+    background-color: black;
+}
+
+.row:nth-child(even) .square:nth-child(even) {
+    background-color: black;
+}
+
+.menu {
+    width: 40%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    align-items: flex-end;
+}
+
+.start {
+    height: 20px;
+}
+
