@@ -1,0 +1,22 @@
+#title {
+    display:flex;
+    justify-content: center;
+}
+
+#infoBox{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.input {
+    margin: 5px;
+}
+
+button {
+    position: relative;
+    /* left: 84px; */
+}
+#regform{
+    justify-content: center;
+    width:50%
+}

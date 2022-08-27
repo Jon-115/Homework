@@ -20,8 +20,8 @@ def likeMovie(myList: list):
             counter += -2
     
     per = int(ratio / len(myList) * 100)
-    # print(counter, per)
     print(f"The rating of the movie was {counter}, with {per}%" + " of people enjoying the movie")
+    return (counter,per)
 
 print(likeList)
 likeMovie(likeList)
