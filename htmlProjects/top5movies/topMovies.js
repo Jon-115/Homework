@@ -2,7 +2,7 @@
 let movieTitle = document.getElementById('movie')
 let movitePoster = document.getElementById('poster')
 const getMovies = () => {
-    fetch('https://api.themoviedb.org/3/movie/popular?api_key=c550a946dcbfd4b30a86667a80d06ad8&language=en-US&page=1&region=US')
+    fetch('https://api.themoviedb.org/3/movie/popular?<<api key>>ad8&language=en-US&page=1&region=US')
         .then(response => {
             return response.json();
         })
