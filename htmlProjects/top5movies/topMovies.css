@@ -1,0 +1,45 @@
+
+body {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 4%;
+    background-color: #041C32;
+}
+/* #main {
+    background-color: #064663;
+    border-radius: 10px;
+} */
+#title {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: x-large;
+    color: #ECB365;
+}
+.movies {
+    background-color: #064663;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    padding: 6%;
+    justify-content: space-evenly;
+}
+img {
+    width: 30%;
+    height: 45%;
+}
+h2 {
+    text-align: center;
+    color: #ECB365;
+}
+.infoBox {
+    justify-content: center;
+}
+p {
+    width: 90%;
+    color: #ECB365;
+    font-size: large;
+    margin-left: 8px;
+}
+
+
