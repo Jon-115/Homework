@@ -1,0 +1,62 @@
+body {
+    background-color: white;
+    width: 100%;
+    
+}
+
+#table {
+    background-color: #93E13A;
+    margin: 2.5%;
+    border-radius: 10px;
+    border-color: black;
+    border-style: ridge;
+    width: 95%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#main {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dealer {
+    background-color: #9DE74D;
+    width: 60%;
+    height: 15%;
+    border-color: black;
+    border-style: ridge;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#player {
+    background-color: #9DE74D;
+    width: 60%;
+    height: 15%;
+    border-color: black;
+    border-style: ridge;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#buttons {
+    margin-top: 10px;
+}
+
+#dealer_label {
+    display: flex;
+    
+}
+
+/* Original 500x726 ... 500/726 = 0.69 */
+img {
+    width: 50px;
+    height: 72.6px;
+}

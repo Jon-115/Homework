@@ -1,0 +1,28 @@
+Black Jack Guidelines
+
+--- BASIC RULES ---
+
+1. Player wins a round: IF player hand totals higher than dealers but <= 21
+2. IF Player hand is > 21 points THEN you lose the round.
+
+--- HOW EACH ROUND WORKS ---
+
+3. Place your bet
+4. The dealer deals 1 card face up to each player, THEN one face up card to themselves
+5. THEN Everyone is delt 1 more face up card EXCEPT the dealer
+6. THEN the dealer's second card is delt face down
+7. If player's two faceup cards == 21 you win 1.5 times your bet from the dealer for the round.
+8. Dealer THEN asks - do you want another card from the top fo the deck?
+    If yes - HIT
+    If no - STAY
+9. No limit of the amount of cards a person can ask for
+10a. IF the dealer < 16, THEN the dealer has to take another card.
+10b. IF the dealer > 17, THEN the dealer has to stick with the current hand.
+11. IF the dealer > 21, all players wins 2x their bet.
+12. IF the dealer <=21, THEN the player with the largest number <= 21 AND greater than the dealer, wins 2x their bet. 
+
+--- SCORING ---
+
+- cards numbered 2 - 10 score using their face value
+- Jacks, Queens, Kings = 10 pts
+- Aces = 1 or 11 pts
