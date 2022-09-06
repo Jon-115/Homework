@@ -1,0 +1,30 @@
+.card {
+    width: 200px;
+  }
+
+body {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  margin-left: 10px;
+}
+
+/* .main {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+#title {
+  text-align: center;
+  color: white;
+}
+
+.btn {
+  background-color: rgb(90, 90, 230);
+  position: relative;
+  top: -1%
+}
