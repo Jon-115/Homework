@@ -1,0 +1,63 @@
+body{
+    background-color:#D6CDA4
+}
+.header{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3D8361;
+}
+.players{
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    color: #1C6758;
+}
+
+#player1{
+    display: flex;
+    width: 150px;
+    height:50px
+}
+#player2{
+    display: flex;
+    width:150px;
+    height:50px
+}
+.startButton{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: #EEF2E6; 
+    border: 2px solid #3D8361;
+}
+
+#tile00, #tile10, #tile20, #tile01, #tile11, #tile21, #tile02, #tile12, #tile22 {
+    /* transform: translate(-50%, -50%); */
+    font-size: 10vmin;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* p {
+    
+} */
+
+/* .playAgain{
+
+} */
+

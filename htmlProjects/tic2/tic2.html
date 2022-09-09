@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tic2.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body class="background">
+    <h2 class="header">Play Tic Tac Toe!</h2>
+    <div class="players">
+        <div id="player1">Player 1: X</div>
+        <div id="player2">Player 2: O</div>
+    </div>
+    <div class="board">
+        <div class="row">
+            <div onclick="setCord(0,0)" id="tile00" class="square"></div>
+            <div onclick="setCord(1,0)" id="tile10" class="square"></div>
+            <div onclick="setCord(2,0)" id="tile20" class="square"></div>
+        </div>
+        <div class="row">
+            <div onclick="setCord(0,1)" id="tile01" class="square"></div>
+            <div onclick="setCord(1,1)" id="tile11" class="square"></div>
+            <div onclick="setCord(2,1)" id="tile21" class="square"></div>
+        </div>
+        <div class="row">
+            <div onclick="setCord(0,2)" id="tile02" class="square"></div>
+            <div onclick="setCord(1,2)" id="tile12" class="square"></div>
+            <div onclick="setCord(2,2)" id="tile22" class="square"></div>
+        </div>
+    </div>
+    <button onclick="reset()" class="playAgain">Play Again?</button>
+</body>
+<script src="./tic2.js"></script>
+</html>
