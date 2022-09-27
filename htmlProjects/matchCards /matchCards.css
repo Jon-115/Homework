@@ -1,0 +1,47 @@
+#body {
+   background-color: blue;
+}
+
+#title {
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: lightblue;
+ 
+    
+    
+}
+
+img {
+    width: 10%;
+    height: 90%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.mains {
+    justify-content: center;
+  
+    display: flex;
+    justify-content: space-around;
+}
+
+#mainTop {
+    margin-top: 5px;
+}
+
+#mainBot {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#buttonbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+

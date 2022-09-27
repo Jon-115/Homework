@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Cards</title>
+    <link rel="stylesheet" href="./matchCards.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body id="body">
+    <div id="title">
+        <h1>Match Card Game</h1>
+    </div>
+
+    <div id="main">
+
+        <div id="mainTop" class="mains">
+            <img src="./assests/cardDown.png" alt="" id="card0" onclick="cardClick(0)">
+            <img src="./assests/cardDown.png" alt="" id="card1" onclick="cardClick(1)">
+            <img src="./assests/cardDown.png" alt="" id="card2" onclick="cardClick(2)"> 
+            <img src="./assests/cardDown.png" alt="" id="card3" onclick="cardClick(3)">
+            <img src="./assests/cardDown.png" alt="" id="card4" onclick="cardClick(4)">
+            <img src="./assests/cardDown.png" alt="" id="card5" onclick="cardClick(5)"> 
+        </div>
+
+        <div id="mainBot" class="mains">
+            <img src="./assests/cardDown.png" alt="" id="card6" onclick="cardClick(6)">
+            <img src="./assests/cardDown.png" alt="" id="card7" onclick="cardClick(7)">
+            <img src="./assests/cardDown.png" alt="" id="card8" onclick="cardClick(8)">
+            <img src="./assests/cardDown.png" alt="" id="card9" onclick="cardClick(9)">
+            <img src="./assests/cardDown.png" alt="" id="card10" onclick="cardClick(10)">
+            <img src="./assests/cardDown.png" alt="" id="card11" onclick="cardClick(11)">
+        </div>
+    </div>
+
+    <div id="buttonbox">
+        <button class="btn btn-secondary" id="button" onclick="newGame()">Reset</button>
+    </div>
+    
+</body>
+<script src="./temp.js"></script>
+
+</html>
